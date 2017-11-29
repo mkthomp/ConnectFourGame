@@ -6,6 +6,8 @@
 
 package connect.four.gui;
 
+import java.awt.Dimension;
+
 import connect.four.Game;
 
 
@@ -110,7 +112,7 @@ public class MainMenuPanel extends javax.swing.JPanel {
                                                 .addGap(524, 524, 524)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                         .addComponent(butPlay, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
-                                                        .addComponent(jtComputerToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                                                        .addComponent(jtComputerToggle, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))))
                                 .addContainerGap(379, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
@@ -155,11 +157,13 @@ public class MainMenuPanel extends javax.swing.JPanel {
                 if(!isEnabled){
 			tfplayer2.setText("Computer");
 			tfplayer2.setEditable(false);
+			jtComputerToggle.setText("Cancel Computer Player");
 			isEnabled = true;
 		}
 		else{
 			tfplayer2.setText("Player 2");
 			tfplayer2.setEditable(true);
+			jtComputerToggle.setText("Play Against Computer");
 			isEnabled = false;
 		}
 		
