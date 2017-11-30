@@ -132,7 +132,8 @@ public class GUI extends javax.swing.JFrame {
 	void addGameOver(){
 		remove(gamePanel);
 		System.out.println("New Game Over Panel added");
-		gameOverPanel = new GameOverPanel(this, winner);
+		gameOverPanel = new GameOverPanel(this, winner, this.getScore1(), this.getScore2(),
+				this.getPlayer1Name(), this.getPlayer2Name());
 		add(gameOverPanel);
 		updateDisplay();
 	}
