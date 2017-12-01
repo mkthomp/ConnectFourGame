@@ -1,0 +1,32 @@
+package connect.four.gui;
+
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+
+import javax.swing.*;
+
+import connect.four.Game;
+
+public class Help extends JFrame {
+	JFrame helpFrame = new JFrame();
+	
+	public void displayHelp() {
+		helpFrame = new JFrame("Connect Four Help");
+		helpFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		helpFrame.setSize(400, 400);
+		
+		JEditorPane helpPane = new JEditorPane();
+		helpPane.setContentType("text/plain");
+		helpPane.setText(
+				"meow meow meow meow meowmeow meow meow meow"
+				+" meow meow meow meow meowmeow meow meow meow meow"
+				+"meow meow meow meow meowmeow meow meow meow meow"
+				);
+		
+		helpFrame.setContentPane(helpPane);
+		helpFrame.setVisible(true);
+	}
+		
+	
+
+}

@@ -15,6 +15,7 @@ public class MainMenuPanel extends javax.swing.JPanel {
 
 	private String name1, name2;
 	GUI gui;
+	Help help = new Help();
 	private boolean isEnabled;
 	
 	public MainMenuPanel(GUI gui) {
@@ -42,6 +43,7 @@ public class MainMenuPanel extends javax.swing.JPanel {
                 jLabel2 = new javax.swing.JLabel();
                 butPlay = new javax.swing.JButton();
                 jtComputerToggle = new javax.swing.JToggleButton();
+                jButton1 = new javax.swing.JButton();
 
                 setBackground(new java.awt.Color(0, 0, 0));
 
@@ -87,6 +89,13 @@ public class MainMenuPanel extends javax.swing.JPanel {
                         }
                 });
 
+                jButton1.setText("Help");
+                jButton1.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton1ActionPerformed(evt);
+                        }
+                });
+
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
                 this.setLayout(layout);
                 layout.setHorizontalGroup(
@@ -94,7 +103,9 @@ public class MainMenuPanel extends javax.swing.JPanel {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(title)
-                                .addGap(471, 471, 471))
+                                .addGap(48, 48, 48)
+                                .addComponent(jButton1)
+                                .addGap(348, 348, 348))
                         .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
@@ -112,14 +123,19 @@ public class MainMenuPanel extends javax.swing.JPanel {
                                                 .addGap(524, 524, 524)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                         .addComponent(butPlay, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
-                                                        .addComponent(jtComputerToggle, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))))
+                                                        .addComponent(jtComputerToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                                 .addContainerGap(379, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addComponent(title)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(38, 38, 38)
+                                                .addComponent(title))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(57, 57, 57)
+                                                .addComponent(jButton1)))
                                 .addGap(59, 59, 59)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(tfplayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -171,6 +187,11 @@ public class MainMenuPanel extends javax.swing.JPanel {
 		
         }//GEN-LAST:event_jtComputerToggleActionPerformed
 
+        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+		help.displayHelp();
+        }//GEN-LAST:event_jButton1ActionPerformed
+
 	public boolean getIsEnabled(){
 		return isEnabled;
 	}
@@ -179,6 +200,7 @@ public class MainMenuPanel extends javax.swing.JPanel {
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JButton butPlay;
+        private javax.swing.JButton jButton1;
         private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel2;
         private javax.swing.JToggleButton jtComputerToggle;
