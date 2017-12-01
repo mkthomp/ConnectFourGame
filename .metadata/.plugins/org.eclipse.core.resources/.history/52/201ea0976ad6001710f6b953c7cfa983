@@ -1,0 +1,13 @@
+package connect.four.gui;
+
+public class meowtest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Help halp = new Help();
+		halp.displayHelp();
+		
+
+	}
+
+}
