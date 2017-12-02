@@ -561,6 +561,7 @@ public class GamePanel extends javax.swing.JPanel implements ScoreChart.Listener
 					board.clear();
 					initNewGame();
 					gui.addGameOver();
+					System.out.println("It's a tie!");
 				}
 				else{
 					pieces[turnNum] = new GUIPiece(turnNum%2);
