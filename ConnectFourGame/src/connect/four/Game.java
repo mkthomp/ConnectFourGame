@@ -64,6 +64,7 @@ public class Game implements ScoreChart {
                     m_scores[player] += 1;
                     for (ScoreChart.Listener l : m_listeners) {
                         l.gameOver(win, Game.this, m_board);
+                        System.out.println("The winner is " + win.getName() + "!");
                     }
                     m_board.clear();
                     performPlay(player);
