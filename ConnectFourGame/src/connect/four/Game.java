@@ -62,10 +62,16 @@ public class Game implements ScoreChart {
 		Player win = detectWinner(m_board, m_inRow);
                 if (win != null) {
                     m_scores[player] += 1;
+                    System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * *\n" +
+                                       "* * *    G   A   M   E     O   V   E   R    * * *\n" +
+                    		               "* * * * * * * * * * * * * * * * * * * * * * * * *");
                     for (ScoreChart.Listener l : m_listeners) {
                         l.gameOver(win, Game.this, m_board);
                         System.out.println("The winner is " + win.getName() + "!");
                     }
+                    System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * *\n" +
+                                       "* * * * * * * * * * * * * * * * * * * * * * * * *\n" +
+         		                       "* * * * * * * * * * * * * * * * * * * * * * * * *");
                     m_board.clear();
                     performPlay(player);
 		} else if (m_board.getMoveCount() == m_board.getWidth()*m_board.getHeight() ) {
