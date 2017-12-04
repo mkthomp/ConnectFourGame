@@ -67,6 +67,7 @@ public class Game implements ScoreChart {
                     		               "* * * * * * * * * * * * * * * * * * * * * * * * *");
                     for (ScoreChart.Listener l : m_listeners) {
                         l.gameOver(win, Game.this, m_board);
+                        System.out.println("The winner is " + win.getName() + "!");
                     }
                     System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * *\n" +
                                        "* * * * * * * * * * * * * * * * * * * * * * * * *\n" +
